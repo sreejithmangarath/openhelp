@@ -104,29 +104,29 @@
                   </div>
                   <div class="header_box">
                      <div class="lang_box ">
-                        <a href="#" title="Language" class="nav-link" data-toggle="dropdown" aria-expanded="true">
-                        <img src="{% static 'user/images/flag-uk.png' %}" alt="flag" class="mr-2 " title="United Kingdom"> Login <i class="fa fa-angle-down ml-2" aria-hidden="true"></i>
+                        <a href="{% url 'addproduct' %}" title="Language"  data-toggle="dropdown" aria-expanded="true"  class="nav-link">
+                        <img src="{% static 'user/images/flag-uk.png' %}" alt="flag" class="mr-2 " title="United Kingdom"> Products  <i class="fa fa-angle-down ml-2" aria-hidden="true"></i>
                         </a>
 
                         <div class="dropdown-menu ">
-                            <a href="{% url 'login'%}" class="dropdown-item">
-                            
-                            Login
-                            </a>
-                         
-
-                        
-                           <a href="{% url 'registerseller' %}" class="dropdown-item">
+                           <a href="{% url 'addproduct'%}" class="dropdown-item">
                            
-                           Register as Seller
+                           Add Product
                            </a>
                         
-                        
-                            <a href="{% url 'registeruser' %}" class="dropdown-item">
+
+                       
+                          <a href="{% url 'productslist' %}" class="dropdown-item">
+                          
+                          List Product
+                          </a>
+                       
+                       
                            
-                            Register as user
-                            </a>
-                         </div>
+                        </div>
+                        
+
+
 
 
                      </div>
@@ -189,7 +189,9 @@
          <!-- banner section end -->
       </div>
       <!-- banner bg main end -->
+        {% block content %}
       <!-- fashion section start -->
+
       <div class="fashion_section">
          <div id="main_slider" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -612,6 +614,7 @@
          </div>
       </div>
       <!-- jewellery  section end -->
+       {% endblock %}
       <!-- footer section start -->
       <div class="footer_section layout_padding">
          <div class="container">

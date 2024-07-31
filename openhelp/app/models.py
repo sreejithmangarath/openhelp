@@ -20,12 +20,9 @@ class Seller(models.Model):
     sellername=models.CharField(max_length=200)
     selleraddress=models.CharField(max_length=200)
     sellercertificate=models.FileField()
-    selleremail=models.CharField(max_length=200)
     sellercontactnumber=models.IntegerField()
 class User(models.Model):
     loginid=models.ForeignKey(Loginuser,on_delete=models.CASCADE)
-    username=models.CharField(max_length=200)
-    useremail=models.CharField(max_length=200)
     usercontactnumber=models.IntegerField()
 
 class Products(models.Model):
